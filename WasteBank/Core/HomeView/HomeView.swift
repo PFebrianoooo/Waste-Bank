@@ -146,8 +146,10 @@ struct HomeView: View {
                             .padding(.leading)
                             .transition(.opacity)
                             .onTapGesture {
-                                vm.animateTextField = false
-                                vm.searchInput = ""
+                                withAnimation(.easeInOut) {
+                                    vm.animateTextField = false
+                                    vm.searchInput = ""
+                                }
                             }
                     }
                     
@@ -182,7 +184,7 @@ struct HomeView: View {
                     .frame(height: 35)
                     .padding(.horizontal)
                     .onTapGesture {
-                        withAnimation(.spring()) {
+                        withAnimation(.easeInOut) {
                             vm.animateTextField = true
                         }
                     }
@@ -224,6 +226,7 @@ struct HomeView: View {
                         .transition(.move(edge: .trailing))
                     }
                 }
+                .frame(maxWidth: UIScreen.main.bounds.width)
                 .padding(.bottom, 10)
                 .background(.regularMaterial)
                 
@@ -245,6 +248,42 @@ struct HomeView: View {
                                             HotNewsCard(news: items)
                                         }
                                     }
+                                    
+                                    
+                                    HStack {
+                                        HStack(spacing: 5) {
+                                            Image(systemName: "lightbulb")
+                                                .imageScale(.medium)
+                                                .padding(.leading)
+                                                
+                                            
+                                            Text("Tips & Trik Pencarian")
+                                                .font(.footnote)
+                                                .fontWeight(.medium)
+                                                .foregroundStyle(Color.black)
+                                        }
+                                        
+                                        Spacer()
+                                        
+                                        Button(action: {
+                                            
+                                        }, label: {
+                                            Text("Selengkapnya")
+                                                .font(.caption)
+                                                .fontWeight(.medium)
+                                                .foregroundStyle(Color.primaryColors)
+                                                .padding(.trailing)
+                                        })
+                                        
+                                        
+                                    }
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.vertical, 5)
+                                    .overlay {
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(lineWidth: 0.5)
+                                    }
+                                    
                                 }
                             }
                         } else {
@@ -276,7 +315,6 @@ struct HomeView: View {
                     .frame(maxHeight: .infinity)
                     .background(Color.white)
                 }
-                
             }
             .frame(maxWidth: UIScreen.main.bounds.width)
     }

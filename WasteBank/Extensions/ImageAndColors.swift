@@ -98,6 +98,11 @@ extension Image {
     static var creditCard: Image {
         Image("creditcardImage")
     }
+    
+    // thankoyou image
+    static var thankyouImage: Image {
+        Image("ThankyouImage")
+    }
 }
 
 

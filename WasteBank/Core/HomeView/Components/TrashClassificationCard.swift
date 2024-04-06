@@ -19,7 +19,7 @@ struct TrashClassificationCard: View {
                 .scaledToFill()
                 .frame(maxWidth: .infinity)
                 .frame(height: 115)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .clipShape(Rectangle())
             
             VStack(alignment: .leading, spacing: 0) {
                 Text("Klasifikasi")

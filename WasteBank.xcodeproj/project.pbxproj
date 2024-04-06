@@ -212,6 +212,7 @@
 		C6201D0F2BBE3DAB00DD4F23 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				C6201D1F2BBE3EB300DD4F23 /* TrashConversionOrganicsDetails.swift */,
 				C6201D112BBE3DD500DD4F23 /* TrashConversionAnorganicsDetails.swift */,
 				C6201D132BBE3E0300DD4F23 /* OrganicTrashClassificationView.swift */,
 				C6201D152BBE3E1800DD4F23 /* NewsDetailView.swift */,
@@ -219,7 +220,6 @@
 				C6201D192BBE3E6300DD4F23 /* StudentEducateView.swift */,
 				C6201D1B2BBE3E7D00DD4F23 /* WalletInformationView.swift */,
 				C6201D1D2BBE3E9500DD4F23 /* NotificationView.swift */,
-				C6201D1F2BBE3EB300DD4F23 /* TrashConversionOrganicsDetails.swift */,
 				C6201D212BBE3F1100DD4F23 /* AnorganicTrashClassificationView.swift */,
 			);
 			path = Details;
